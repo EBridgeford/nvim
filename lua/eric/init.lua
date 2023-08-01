@@ -1,0 +1,8 @@
+require("eric.packer")
+require("eric.treesitter")
+require("eric.remap")
+require("eric.set")
+require("eric.indentline")
+require("eric.lsp")
+require("eric.harpoon")
+require("eric.telescope")
