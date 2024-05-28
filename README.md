@@ -1,3 +1,1 @@
-# nvim
-
-Eric's neovim
+Second neovim config
