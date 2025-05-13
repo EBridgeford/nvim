@@ -2,16 +2,6 @@ require("eric.set")
 require("eric.remap")
 require("eric.lazy_init")
 
--- DO.not
--- DO NOT INCLUDE THIS
-
--- If i want to keep doing lsp debugging
--- function restart_htmx_lsp()
---     require("lsp-debug-tools").restart({ expected = {}, name = "htmx-lsp", cmd = { "htmx-lsp", "--level", "DEBUG" }, root_dir = vim.loop.cwd(), });
--- end
-
--- DO NOT INCLUDE THIS
--- DO.not
 
 local augroup = vim.api.nvim_create_augroup
 local EricGroup = augroup('EricGroup', {})
@@ -23,22 +13,6 @@ function R(name)
     require("plenary.reload").reload_module(name)
 end
 
---vim.filetype.add({
---    extension = {
---        templ = 'templ',
---    }
---})
-
---autocmd('TextYankPost', {
---    group = yank_group,
---    pattern = '*',
---    callback = function()
---        vim.highlight.on_yank({
---            higroup = 'IncSearch',
---            timeout = 40,
---        })
---    end,
---})
 
 autocmd({"BufWritePre"}, {
     group = EricGroup,
